@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    background-color: rgba(235, 219, 189, 0.605);
+}
+
+body {
+    padding-top: 40px;
+    background-color: rgb(37, 34, 34);
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.left-strong {
+    margin: 0;
+    font-size: 15px;
+    text-align: left;
+}
+
+.name {
+    color: blueviolet;
+    font-size: 3.5em;
+    line-height: 1em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.header-1, .header-2, .header-3, .header-4 {
+    font-size: 3em;
+    color: blueviolet;
+}
+
+.header-2 { 
+    height: 1.5em;
+}
+
+.header-4 {
+    line-height: 0.7em;
+    padding-bottom: 0.8em;
+}
+
+.about-me {
+    font-size: 15px;
+    margin-top: 1em;
+    padding-top: 0.5em;
+}
+
+.bullet-interest {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    margin-top: 1em;
+}
+
+.qoute-container {
+    font-size: 1.5em;
+    margin-top: 1.8em;
+    margin-bottom: 2em;
+}
+
+.qoute {
+    font-size: 1em;
+    line-height: 1em;
+    margin-top: 0.5em;
+    padding: 20px;
+}
+
+.author {
+    display: flex;
+    justify-content: end;
+}
+
+.email {
+    height: 2em;
+    font-size: 1.4em;
+    padding-top: 0.4em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+.parent-socials {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials {
+    font-size: 44px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
+}
+
+.social-links {
+    color: white;
+}
+
+.social-links:hover {
+    color: blueviolet;
+}
+
+
+.main-body-top, .main-body-mid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-profile, .container-about, .container-skills, .container-interests, .container-contact {
+    background-color: rgb(44, 44, 44);
+    box-shadow: 0px 0px 20px hsla(0, 7%, 24%, 0.525);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: left;
+    transition: background-color 0.3s ease;
+}
+
+.container-profile:hover, .container-about:hover, .container-skills:hover, .container-interests:hover, .container-contact:hover {
+    box-shadow: 0px 0px 20px hsla(0, 7%, 43%, 0.525);
+}
+
+.container-profile {
+    max-width: 30em;
+    height: 25em;
+}
+
+.container-about {
+    max-width: 30em;
+    height: 25em;
+}
+
+.container-skills {
+    width: 20em;
+    height: 25em;
+}
+
+.container-interests {
+    width: 40em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20em;
+}
+
+.container-contact {
+    width: 44em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20em;
+}
+
+.left-container {
+    width: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    justify-content: left;
+}
+
+.right-container {
+    color: white;
+    line-height: 1.5em;
+    padding: 1em;
+}
+
+.mid-left-container, .mid-right-container {
+    color: white;
+    line-height: 1.5em;
+    padding: 1em;
+    width: 15em;
+}
+
+.mid-left-container {
+    border-right: 2px solid white;
+}
+
+a {
+    color: blueviolet;
+    margin-bottom: 50px;
+}
+
+img {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+    width: 70px;
+    margin-top: 20px;
+}
+
+#skills-img {
+    text-align: center;
+    font-size: 4em;
+}
+
+.skills, .skills-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.skills-container {
+    width: 15em;
+    padding-top: 3.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 3em;
+    margin-top: 0.5em;
+    padding-left: 1.5em;
+}
+
+.description {
+    margin-top: 1em;
+    text-align: left;
+}
+
+/* Media Queries */
+@media (max-width: 1450px) {
+    .main-body-top, .main-body-mid {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media (max-width: 1250px) {
+    .main-body-top, .main-body-mid {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left-container, .right-container, .mid-left-container, .mid-right-container {
+        width: 100%;
+    }
+
+    .header-1, .header-2, .header-3, .header-4 {
+        font-size: 2.7em;
+    }
+
+    .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .qoute {
+        padding-top: 0.3em;
+    }
+
+    .right-container {
+        height: 21em;
+    }
+
+    .about-me {
+        font-size: 1em;
+        width: 18em;
+        line-height: 1.5em;
+    }
+
+    .mid-right-container {
+        height: 12em;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .main-body-top, .main-body-mid {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left-container, .right-container, .mid-left-container, .mid-right-container {
+        width: 100%;
+    }
+
+    .header-1, .header-2, .header-3, .header-4 {
+        font-size: 2.7em;
+    }
+
+    .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
+        max-width: 30em;
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .qoute {
+        padding-top: 0.3em;
+    }
+
+    .right-container {
+        height: 21em;
+    }
+
+    .about-me {
+        font-size: 1em;
+        width: 18em;
+        line-height: 1.5em;
+    }
+
+    .mid-right-container {
+        height: 12em;
+    }
+
+}
+
+
+@media (max-width: 1083px) {
+    .main-body-top, .main-body-mid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-container {
+        height: 20em;
+        gap: 2em;
+    }
+
+    .container-profile img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .Profile {
+        height: 20em;
+        width: 10em;
+    }
+
+    .name {
+        font-size: 2.2em;
+    }
+
+    .container-profile {
+        width: 30em;
+        height: 20em;
+    }
+
+    .container-about, .container-contact {
+        width: 40em;
+    }
+
+    .container-skills {
+        width: 30em;
+    }
+
+    .skills-container {
+        width: 10em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .skills-column {
+        width: 30em;
+        display: flex;
+    }
+
+    .about-me {
+        font-size: 1.3em;
+        width: 30em;
+    }
+
+    .description {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        margin-top: 0;
+    }
+    
+    .header-1, .header-2, .header-3, .header-4 {
+        font-size: 2em;
+    }
+
+    .skills-img, .contact-img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-body-top, .main-body-mid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-container {
+        height: 20em;
+        gap: 2em;
+    }
+
+    .right-container {
+        height: 17em;
+        width: 23em;
+    }
+
+    .container-profile img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .Profile {
+        height: 20em;
+        width: 10em;
+    }
+
+    .name {
+        font-size: 2.2em;
+    }
+
+    .container-profile,.container-about, .container-contact, .container-skills, .container-interests, .container-contact {
+        width: 25em;
+        height: 18em;
+    }
+
+    li {
+        font-size: 0.7em;
+    }
+
+    .container-contact {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .qoute,small {
+        font-size: 0.7em;
+    }
+
+    .skills-container {
+        width: 10em;
+        grid-template-columns: 1fr 1fr ;
+    }
+
+    .skills-column {
+        width: 30em;
+        display: flex;
+    }
+
+    .about-me {
+        font-size: 1em;
+        width: 25em;
+    }
+
+    .description {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        margin-top: 0;
+    }
+    
+    .header-1, .header-2, .header-3, .header-4 {
+        font-size: 2em;
+    }
+
+    .skills-img, .contact-img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 412px) {
+    .main-body-top, .main-body-mid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-container {
+        height: 20em;
+        gap: 2em;
+    }
+
+    .right-container {
+        height: 17em;
+        width: 23em;
+    }
+
+    .container-profile img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .Profile {
+        height: 20em;
+        width: 10em;
+    }
+
+    .name {
+        font-size: 2.2em;
+    }
+
+    .container-profile,.container-about, .container-contact, .container-skills, .container-interests, .container-contact {
+        width: 23em;
+        height: 17em;
+    }
+
+    li {
+        font-size: 0.7em;
+    }
+
+    .container-contact {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .qoute,small {
+        font-size: 0.7em;
+    }
+
+    .skills-container {
+        width: 10em;
+        grid-template-columns: 1fr 1fr ;
+        row-gap: 1.5em;
+    }
+
+    .skills-column {
+        width: 30em;
+        display: flex;
+    }
+
+    .about-me {
+        padding: 0;
+        font-size: 0.9em;
+        width: 23em;
+    }
+
+    #skills-img {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3.5em;
+    }
+
+    .description {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        margin-top: 0;
+    }
+    
+    .header-1, .header-2, .header-3, .header-4 {
+        font-size: 2em;
+    }
+
+    .skills-img, .contact-img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
+        padding: 10px;
+    }
+}
