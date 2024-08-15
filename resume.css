@@ -6,16 +6,21 @@
 }
 
 ::selection {
-    background-color: rgba(235, 219, 189, 0.605);
+    background-color: #BA9653;
 }
 
 body {
+    height: 100vh;
+    margin: 0;
     padding-top: 40px;
-    background-color: rgb(37, 34, 34);
+    background-color: rgb(255, 255, 255);
     font-family: "Poppins";
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    align-content:  center;
+    gap: 25px;
+    flex-wrap: wrap;
     box-sizing: border-box;
 }
 
@@ -26,7 +31,7 @@ body {
 }
 
 .name {
-    color: blueviolet;
+    color: #963821;
     font-size: 3.5em;
     line-height: 1em;
     padding-top: 5px;
@@ -35,7 +40,7 @@ body {
 
 .header-1, .header-2, .header-3, .header-4 {
     font-size: 3em;
-    color: blueviolet;
+    color: #963821;
 }
 
 .header-2 { 
@@ -47,10 +52,11 @@ body {
     padding-bottom: 0.8em;
 }
 
-.about-me {
+#desc.about-me {
     font-size: 15px;
     margin-top: 1em;
     padding-top: 0.5em;
+    display: inline-block; 
 }
 
 .bullet-interest {
@@ -101,79 +107,67 @@ body {
 }
 
 .social-links {
-    color: white;
+    color: #000000;
 }
 
 .social-links:hover {
-    color: blueviolet;
-}
-
-
-.main-body-top, .main-body-mid {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 1.5em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    color: rgb(255, 255, 255);
 }
 
 .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
-    background-color: rgb(44, 44, 44);
-    box-shadow: 0px 0px 20px hsla(0, 7%, 24%, 0.525);
+    background-color: rgb(0, 122, 51);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.125);
-    color: white;
+    box-shadow: 10px 10px rgba(0, 122, 51, 0.6);
+    color: black;
     padding: 20px;
     display: flex;
     align-items: center;
     gap: 40px;
     justify-content: left;
-    transition: background-color 0.3s ease;
+    transition: all ease 0.5s;
+    transform: skew(-5deg);
 }
 
+
 .container-profile:hover, .container-about:hover, .container-skills:hover, .container-interests:hover, .container-contact:hover {
-    box-shadow: 0px 0px 20px hsla(0, 7%, 43%, 0.525);
+    box-shadow: 10px 10px rgba(0, 122, 51, 0.5),
+                20px 20px rgba(0, 122, 51, 0.3);
 }
 
 .container-profile {
-    max-width: 30em;
-    height: 25em;
+    width: 30em;
+    height: 19em;
 }
 
 .container-about {
-    max-width: 30em;
-    height: 25em;
+    width: 30em;
+    height: 19em;
 }
 
 .container-skills {
     width: 20em;
-    height: 25em;
+    height: 19em;
 }
 
 .container-interests {
-    width: 40em;
+    width: 35em;
+    height: 19em;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20em;
 }
 
 .container-contact {
-    width: 44em;
+    width: 25em;
+    height: 19em;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20em;
 }
 
 .left-container {
     width: 600px;
-    color: white;
     display: flex;
     align-items: center;
     gap: 2em;
@@ -181,20 +175,19 @@ body {
 }
 
 .right-container {
-    color: white;
     line-height: 1.5em;
     padding: 1em;
 }
 
 .mid-left-container, .mid-right-container {
-    color: white;
     line-height: 1.5em;
     padding: 1em;
     width: 15em;
+    height: 15em;
 }
 
 .mid-left-container {
-    border-right: 2px solid white;
+    border-right: 2px solid rgb(0, 0, 0);
 }
 
 a {
@@ -219,12 +212,14 @@ hr.solid {
     font-size: 4em;
 }
 
-.skills, .skills-text {
+.skills-text {
     display: flex;
     justify-content: center;
-    text-align: center;
 }
 
+.skill {
+    gap: 10px;
+}
 
 .skills-container {
     width: 15em;
@@ -242,352 +237,53 @@ hr.solid {
     text-align: left;
 }
 
-/* Media Queries */
-@media (max-width: 1450px) {
-    .main-body-top, .main-body-mid {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .skills-container {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-}
-
-@media (max-width: 1250px) {
-    .main-body-top, .main-body-mid {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .left-container, .right-container, .mid-left-container, .mid-right-container {
-        width: 100%;
-    }
-
-    .header-1, .header-2, .header-3, .header-4 {
-        font-size: 2.7em;
-    }
-
-    .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .qoute {
-        padding-top: 0.3em;
-    }
-
-    .right-container {
-        height: 21em;
-    }
-
-    .about-me {
-        font-size: 1em;
-        width: 18em;
-        line-height: 1.5em;
-    }
-
-    .mid-right-container {
-        height: 12em;
-    }
-
-}
-
-@media (max-width: 1200px) {
-    .main-body-top, .main-body-mid {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .left-container, .right-container, .mid-left-container, .mid-right-container {
-        width: 100%;
-    }
-
-    .header-1, .header-2, .header-3, .header-4 {
-        font-size: 2.7em;
-    }
-
-    .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
-        max-width: 30em;
-        margin-bottom: 20px;
-    }
-
-    img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .qoute {
-        padding-top: 0.3em;
-    }
-
-    .right-container {
-        height: 21em;
-    }
-
-    .about-me {
-        font-size: 1em;
-        width: 18em;
-        line-height: 1.5em;
-    }
-
-    .mid-right-container {
-        height: 12em;
-    }
-
-}
-
-
-@media (max-width: 1083px) {
-    .main-body-top, .main-body-mid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .left-container {
-        height: 20em;
-        gap: 2em;
-    }
-
-    .container-profile img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .Profile {
-        height: 20em;
-        width: 10em;
-    }
-
-    .name {
-        font-size: 2.2em;
-    }
-
-    .container-profile {
-        width: 30em;
-        height: 20em;
-    }
-
-    .container-about, .container-contact {
-        width: 40em;
-    }
-
-    .container-skills {
-        width: 30em;
-    }
-
-    .skills-container {
-        width: 10em;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    .skills-column {
-        width: 30em;
-        display: flex;
-    }
-
-    .about-me {
-        font-size: 1.3em;
-        width: 30em;
-    }
-
-    .description {
-        display: flex;
-        align-items: left;
-        justify-content: left;
-        margin-top: 0;
-    }
-    
-    .header-1, .header-2, .header-3, .header-4 {
-        font-size: 2em;
-    }
-
-    .skills-img, .contact-img {
-        height: 100px;
-        width: 100px;
-    }
-
-    .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
-        padding: 10px;
-    }
-}
-
 @media (max-width: 480px) {
-    .main-body-top, .main-body-mid {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .left-container {
-        height: 20em;
-        gap: 2em;
+    body {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        gap: 20px;
     }
-
-    .right-container {
-        height: 17em;
-        width: 23em;
-    }
-
-    .container-profile img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .Profile {
-        height: 20em;
-        width: 10em;
-    }
-
     .name {
-        font-size: 2.2em;
+        font-size: 2.5em;
     }
 
-    .container-profile,.container-about, .container-contact, .container-skills, .container-interests, .container-contact {
-        width: 25em;
+    .header-1, .header-2, .header-3, .header-4 {
+        font-size: 2em;
+    }
+
+    .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
+        width: 20em;
         height: 18em;
-    }
-
-    li {
-        font-size: 0.7em;
-    }
-
-    .container-contact {
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .qoute,small {
-        font-size: 0.7em;
-    }
-
-    .skills-container {
-        width: 10em;
-        grid-template-columns: 1fr 1fr ;
-    }
-
-    .skills-column {
-        width: 30em;
-        display: flex;
-    }
-
-    .about-me {
-        font-size: 1em;
-        width: 25em;
-    }
-
-    .description {
-        display: flex;
-        align-items: left;
-        justify-content: left;
-        margin-top: 0;
-    }
-    
-    .header-1, .header-2, .header-3, .header-4 {
-        font-size: 2em;
-    }
-
-    .skills-img, .contact-img {
-        height: 100px;
-        width: 100px;
-    }
-
-    .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
         padding: 10px;
-    }
-}
-
-@media (max-width: 412px) {
-    .main-body-top, .main-body-mid {
-        flex-direction: column;
-        align-items: center;
+        gap: 15px;
     }
 
-    .left-container {
-        height: 20em;
-        gap: 2em;
+    .left-container img {
+        height: 150px;
+        width: 150px;
     }
 
-    .right-container {
-        height: 17em;
-        width: 23em;
-    }
-
-    .container-profile img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .Profile {
-        height: 20em;
-        width: 10em;
-    }
-
-    .name {
-        font-size: 2.2em;
-    }
-
-    .container-profile,.container-about, .container-contact, .container-skills, .container-interests, .container-contact {
-        width: 23em;
-        height: 17em;
-    }
-
-    li {
-        font-size: 0.7em;
-    }
-
-    .container-contact {
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .qoute,small {
-        font-size: 0.7em;
-    }
-
-    .skills-container {
-        width: 10em;
-        grid-template-columns: 1fr 1fr ;
-        row-gap: 1.5em;
-    }
-
-    .skills-column {
-        width: 30em;
-        display: flex;
-    }
-
-    .about-me {
-        padding: 0;
+   .about-me {
         font-size: 0.9em;
-        width: 23em;
+        line-height: 1.2em;
+   }
+    .mid-left-container, .mid-right-container {
+        line-height: 1.5em;
+        padding: 1em;
+        width: 15em;
+        height: 15em;
     }
 
-    #skills-img {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 3.5em;
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
     }
 
-    .description {
-        display: flex;
-        align-items: left;
-        justify-content: left;
-        margin-top: 0;
-    }
-    
-    .header-1, .header-2, .header-3, .header-4 {
-        font-size: 2em;
-    }
-
-    .skills-img, .contact-img {
-        height: 100px;
-        width: 100px;
-    }
-
-    .container-profile, .container-about, .container-skills, .container-interests, .container-contact {
-        padding: 10px;
+    .bullet-interest, .qoute-container, .email {
+        font-size: 1em;
     }
 }
+
+
+
